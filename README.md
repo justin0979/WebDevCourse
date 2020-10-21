@@ -1,3 +1,3 @@
-# WebDevCourse
+# Basic HTML
 
-Each branch will be a specific section of The Wev Developer course.
+Simple HTML practice.

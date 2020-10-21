@@ -1,0 +1,25 @@
+{
+  "name": "WebDevCourse",
+  "version": "1.0.0",
+  "description": "Simple HTML practice.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin0979/WebDevCourse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justin0979/WebDevCourse/issues"
+  },
+  "homepage": "https://github.com/justin0979/WebDevCourse#readme"
+}
