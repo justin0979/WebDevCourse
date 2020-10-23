@@ -6,15 +6,57 @@
       header {
         text-align: center;
       }
+
+      nav > a:link,
+      nav > a:visited {
+        text-decoration: none;
+        padding: 20px 30px;
+        margin: 10px;
+        font-size: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        color: #ffe;
+        background-color: darkgreen;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s;
+      }
+
+      nav > a:hover {
+        background-color: rgb(20, 168, 20);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      nav > a:active {
+        background-color: springgreen;
+        color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-1px);
+      }
+
       .spot {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
       }
-      section div {
+
+      section > div {
+        height: 50vh;
+        border: 1px solid rgba(33, 53, 53, 0.1);
+        border-top: 0 solid white;
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.4);
         text-align: center;
-        width: 50%;
+        width: 33%;
         margin-top: 55px;
+      }
+
+      form.registration {
+        height: 88%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
       }
     </style>
   </head>
@@ -25,6 +67,7 @@
       <nav><a href="index.html">Go Home</a></nav>
     </header>
     <section class="spot">
+      <!-- Simple Form Example -->
       <div>
         <h2>Simple Form Example</h2>
         <form action="/forms.html">
@@ -74,8 +117,10 @@
           <button>Button Submit</button>
         </form>
       </div>
+
+      <!-- Hijacking Searches-->
       <div>
-        <h2>Hijacking Seaches</h2>
+        <h2>Hijacking Searches</h2>
         <h3>Search Reddit</h3>
         <form action="https://www.reddit.com/search">
           <input type="text" name="query" />
@@ -93,6 +138,8 @@
           </button>
         </form>
       </div>
+
+      <!-- More Inputs -->
       <div>
         <h2>More Inputs</h2>
         <h3>Checkbox</h3>
@@ -116,6 +163,8 @@
           <button>Submit Check</button>
         </form>
       </div>
+
+      <!-- More Input Types -->
       <div>
         <h3>And More Input Types</h3>
         <form action="">
@@ -142,11 +191,81 @@
               name="requests"
               placeholder="What are your special requests?"
               id=""
-              cols="50"
+              cols="35"
               rows="10"
             ></textarea>
           </p>
+          <button>Submit Requests</button>
+        </form>
+      </div>
+
+      <!-- Validation -->
+      <div>
+        <h2>Validations Demo</h2>
+        <form action="">
+          <label for="first">Enter First Name</label
+          ><input type="text" name="first" id="first" required />
+          <p>
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              minlength="5"
+              maxlength="8"
+              required
+            />
+          </p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
           <button>Submit</button>
+        </form>
+      </div>
+
+      <!-- Race Registration Exercise-->
+      <div>
+        <h1>Race Registration!</h1>
+        <form action="" class="registration">
+          <div>
+            <label for="fn">First Name</label>
+            <input type="text" name="fn" id="fn" required />
+            <label for="ln">Last Name</label>
+            <input type="text" name="ln" id="ln" required />
+          </div>
+
+          <div>
+            <h3>Select a Race:</h3>
+
+            <input type="radio" name="race" id="funrun" />
+            <label for="funrun">Fun Run 5k</label><br />
+            <input
+              type="radio"
+              name="race"
+              id="halfmarathon"
+              checked
+            />
+            <label for="halfmarathon">Half Marathon</label><br />
+            <input type="radio" name="race" id="fullmarathon" />
+            <label for="fullmarathon">Full Marathon</label><br />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <label for="pw">Password</label>
+            <input type="password" name="pw" id="pw" required />
+          </div>
+
+          <div>
+            <label for="age">Select Age Group</label>
+            <select name="age" id="age">
+              <option value="under 18">under 18</option>
+              <option value="18-30">18-30</option>
+              <option value="30-50">30-50</option>
+              <option value="50+">50+</option>
+            </select>
+          </div>
+          <button>Register!</button>
         </form>
       </div>
     </section>
