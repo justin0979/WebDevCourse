@@ -1,0 +1,48 @@
+h1 {
+  text-align: center;
+  font-weight: 300;
+  text-decoration: wavy green underline;
+  font-size: 40px;
+  letter-spacing: 15px;
+  font-family: fantasy, monospace;
+}
+
+h1,
+h2 {
+  color: darkslateblue;
+}
+
+main a:visited {
+  color: green;
+}
+
+main > a:link,
+main > a:visited {
+  color: red;
+}
+
+a[href*="biKe" i]:link:hover,
+a[href="BIke" i]:visited:hover {
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #ffe;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.6);
+  color: yellow;
+}
+
+.paragraph:nth-of-type(3n) {
+  background-image: linear-gradient(to left bottom, darkblue, teal);
+  color: white;
+}
+
+.paragraph:not(:nth-of-type(3n)) {
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.box {
+  background-color: lime;
+  height: 100px;
+  width: 100px;
+}
