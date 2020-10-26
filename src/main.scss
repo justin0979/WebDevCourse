@@ -1,0 +1,34 @@
+@mixin borders($col, $per) {
+  border: 1px solid black;
+  background-color: rgba($col, $per);
+}
+
+h1 {
+  background-color: paleturquoise;
+}
+
+.width {
+  @include borders(magenta, 1);
+  width: 300px;
+}
+
+.paddingAndMargin {
+  @include borders(lime, 0.3);
+  padding: 20px;
+  margin: 20px;
+}
+
+.try {
+  background-color: olivedrab;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+
+  display: inline-block;
+}
+
+.float {
+  background-color: blue;
+  padding: 5px 20px 10px;
+  float: left;
+}
